@@ -7,6 +7,13 @@ function App() {
   const getPokemon = () => {
 
     fetch("https://pokeapi.co/api/v2/pokemon/ditto")
+      .then (res => {
+        // do something
+        console.log(res);
+      })
+      .catch (err => {
+        console.log(err);
+      })
   }
 
 
@@ -16,7 +23,7 @@ function App() {
     <div className="App">
       <h1>Catch That PokeMon!!!</h1>
       <br></br>
-      <button>Fetch</button>
+      <button onClick={getPokemon}>Fetch</button>
     </div>
   );
 }
