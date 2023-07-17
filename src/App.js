@@ -1,31 +1,16 @@
 // import logo from './logo.svg';
-import './App.css';
+// import './App.css';
 import Post from './components/Post';
+import React from 'react';
 
-function App() {
 
-  const getPokemon = () => {
-
-    fetch("https://pokeapi.co/api/v2/pokemon/ditto")
-      .then (res => {
-        // do something
-        console.log(res);
-      })
-      .catch (err => {
-        console.log(err);
-      })
+  function App() {
+    return (
+      <div>
+        <Post/>
+      </div>
+    )
   }
 
 
-
-
-  return (
-    <div className="App">
-      <h1>Catch That PokeMon!!!</h1>
-      <br></br>
-      <button onClick={getPokemon}>Fetch</button>
-    </div>
-  );
-}
-
-export default App;
+  export default App;
